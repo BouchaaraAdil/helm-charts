@@ -6,9 +6,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.11.1
   creationTimestamp: null
-  name: thanosrulers.monitoring.coreos.com
+  name: thanosrulers.v45-monitoring.coreos.com
 spec:
-  group: monitoring.coreos.com
+  group: v45-monitoring.coreos.com
   names:
     categories:
     - prometheus-operator

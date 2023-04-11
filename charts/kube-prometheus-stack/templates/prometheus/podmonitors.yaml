@@ -3,7 +3,7 @@ apiVersion: v1
 kind: List
 items:
 {{- range .Values.prometheus.additionalPodMonitors }}
-  - apiVersion: monitoring.coreos.com/v1
+  - apiVersion: v45-monitoring.coreos.com/v1
     kind: PodMonitor
     metadata:
       name: {{ .name }}
