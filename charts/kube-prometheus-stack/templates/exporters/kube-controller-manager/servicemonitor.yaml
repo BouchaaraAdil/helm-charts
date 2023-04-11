@@ -1,5 +1,5 @@
 {{- if and .Values.kubeControllerManager.enabled .Values.kubeControllerManager.serviceMonitor.enabled }}
-apiVersion: monitoring.coreos.com/v1
+apiVersion: v45-monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: {{ template "kube-prometheus-stack.fullname" . }}-kube-controller-manager

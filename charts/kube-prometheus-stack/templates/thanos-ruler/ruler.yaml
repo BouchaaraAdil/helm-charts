@@ -1,5 +1,5 @@
 {{- if .Values.thanosRuler.enabled }}
-apiVersion: monitoring.coreos.com/v1
+apiVersion: v45-monitoring.coreos.com/v1
 kind: ThanosRuler
 metadata:
   name: {{ template "kube-prometheus-stack.thanosRuler.name" . }}

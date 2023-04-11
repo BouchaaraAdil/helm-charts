@@ -7,7 +7,7 @@ metadata:
 items:
 {{- if .Values.additionalPrometheusRulesMap }}
 {{- range $prometheusRuleName, $prometheusRule := .Values.additionalPrometheusRulesMap }}
-  - apiVersion: monitoring.coreos.com/v1
+  - apiVersion: v45-monitoring.coreos.com/v1
     kind: PrometheusRule
     metadata:
       name: {{ template "kube-prometheus-stack.name" $ }}-{{ $prometheusRuleName }}
@@ -24,7 +24,7 @@ items:
 {{- end }}
 {{- else }}
 {{- range .Values.additionalPrometheusRules }}
-  - apiVersion: monitoring.coreos.com/v1
+  - apiVersion: v45-monitoring.coreos.com/v1
     kind: PrometheusRule
     metadata:
       name: {{ template "kube-prometheus-stack.name" $ }}-{{ .name }}
